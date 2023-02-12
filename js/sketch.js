@@ -3,7 +3,7 @@ let imgList = [];
 let canvas;
 
 function preload() {
-  json = loadJSON("../json/data.json");
+  json = loadJSON("json/data.json");
 }
 
 function setup() {
@@ -12,7 +12,7 @@ function setup() {
   imgList = json.content.imageNames;
 
   for(let i=0; i<imgList.length; i++) {
-    loadImage('../images/' + imgList[i], img => {
+    loadImage('images/' + imgList[i], img => {
       if(img.width > 50){
         image(img, random(width - img.width), random(height - img.height));
       }
